@@ -11,6 +11,19 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .vue()
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/app.js', 'public/js').vue()
+mix.js('resources/js/main.js', 'public/js');
+mix.js('resources/js/costum-slick.js', 'public/js');
+mix.js('resources/js/maps.js', 'public/js');
+
+mix.sass('resources/sass/app.scss', 'public/css');
+mix.sass('resources/sass/costum/style.scss', 'public/css');
+mix.sass('resources/sass/costum/confirm-delivery.scss', 'public/css');
+mix.sass('resources/sass/costum/checkbox-radio-input.scss', 'public/css');
+mix.sass('resources/sass/costum/detail-restaurant-tabs.scss', 'public/css');
+mix.sass('resources/sass/costum/sign-in.scss', 'public/css');
+mix.sass('resources/sass/costum/help-page.scss', 'public/css');
+mix.sass('resources/sass/main.scss', 'public/css');
+
+
+mix.postCss("resources/css/tailwind.css", "public/css", [require("tailwindcss")]);
